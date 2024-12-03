@@ -16,7 +16,7 @@ class Menu:
         curses.init_pair(2, curses.COLOR_WHITE, curses.COLOR_GREEN) # select
 
         curses.init_pair(3, curses.COLOR_YELLOW, curses.COLOR_BLACK)
-        curses.init_pair(4, curses.COLOR_YELLOW, curses.COLOR_GREEN) # select highlighted
+        curses.init_pair(4, curses.COLOR_YELLOW, curses.COLOR_WHITE) # select highlighted
 
     def add_option(self, label, callback):
         self._options.append((label, callback))
