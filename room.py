@@ -7,12 +7,26 @@ class Room:
         self._std_screen = std_screen
         self._ascii_sprite = ascii_sprite
         self._description = description
-        self._chapter_menu = Menu(self._std_screen, False, 2)
-        self._chapter_menu.add_option("Solve Puzzle", None)
-        self._chapter_menu.add_option("Exit Game", exit)
-        self._chapter_menu.add_option("Next Room", handle_next_room)
+        self._puzzle = puzzle
+        self._chapter_menu = Menu(self._std_screen, False)
+        self._chapter_menu.add_option("Wiki Rätsel lösen", self._call_puzzle)
+        self._chapter_menu.add_option("Spiel beenden", exit)
+        self._handle_next_room = handle_next_room
         self._is_solved = False
 
+    def _call_puzzle(self):
+        if self._puzzle is None:
+            return
+        self._is_solved = self._puzzle.play()
+        if self._is_solved:
+            self._chapter_menu = Menu(self._std_screen, False, 0)
+            self._chapter_menu.add_option("Nächsten Raum betreten", self._handle_next_room)
+            self._chapter_menu.add_option("Spiel beenden", exit)
+        else:
+            self._chapter_menu = Menu(self._std_screen, False)
+            self._chapter_menu.add_option("Wiki Rätsel lösen", self._call_puzzle)
+            self._chapter_menu.add_option("Spiel beenden", exit)
+        self.run()
 
     def run(self):
         self._std_screen.clear()
@@ -22,4 +36,3 @@ class Room:
         self._chapter_menu.render(self._ascii_sprite.height)
         self._std_screen.getch()
         self._std_screen.refresh()
-

@@ -1,6 +1,7 @@
 import curses
 import os.path
 
+from puzzle import SolveTitle
 from room import Room
 from sprite import AsciiSprite, Text
 
@@ -16,11 +17,19 @@ class Game:
             Room(self._std_screen,
             AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room1.txt")),
             Text(os.path.join(TEXTS_PATH, "chapter1.txt")),
-            puzzle=None, handle_next_room=self.handle_next_room),
+            puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room),
             Room(self._std_screen,
             AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room2.txt")),
             Text(os.path.join(TEXTS_PATH, "chapter1.txt")),
-            puzzle=None, handle_next_room=self.handle_next_room)
+            puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room),
+            Room(self._std_screen,
+            AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room3.txt")),
+            Text(os.path.join(TEXTS_PATH, "chapter1.txt")),
+            puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room),
+            Room(self._std_screen,
+            AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room4.txt")),
+            Text(os.path.join(TEXTS_PATH, "chapter1.txt")),
+            puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room)
         ]
 
     def handle_next_room(self):

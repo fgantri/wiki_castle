@@ -34,7 +34,7 @@ class Menu:
                 if self._current_option_index == len(self._options):
                     self._current_option_index = 0
             elif key == curses.KEY_ENTER or key in [10, 13]:
-                self._options[self._current_option_index][1]()
+                return self._options[self._current_option_index][1]()
             self._std_screen.refresh()
 
     def _print_menu(self, selected_row_idx, margin_top = 0):
@@ -84,5 +84,5 @@ class MainMenu(Menu):
                 if self._current_option_index == len(self._options):
                     self._current_option_index = 0
             elif key == curses.KEY_ENTER or key in [10, 13]:
-                self._options[self._current_option_index][1]()
+                return self._options[self._current_option_index][1]()
             self._std_screen.refresh()
