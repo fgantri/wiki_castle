@@ -31,7 +31,7 @@ class Menu:
         curses.init_pair(2, curses.COLOR_WHITE, curses.COLOR_GREEN) # select
 
         curses.init_pair(3, curses.COLOR_YELLOW, curses.COLOR_BLACK)
-        curses.init_pair(4, curses.COLOR_YELLOW, curses.COLOR_GREEN) # select highlighted
+        curses.init_pair(4, curses.COLOR_YELLOW, curses.COLOR_WHITE) # select highlighted
 
     def add_option(self, label, callback):
         self._options.append((label, callback))
@@ -53,7 +53,7 @@ class Menu:
                     self._current_option_index = 0
             elif key == curses.KEY_ENTER or key in [10, 13]:
                 playsound(SELECT_PRESS_SFX)
-                self._options[self._current_option_index][1]()
+                return self._options[self._current_option_index][1]()
             self._std_screen.refresh()
 
     def _print_menu(self, selected_row_idx, margin_top = 0):
@@ -106,5 +106,5 @@ class MainMenu(Menu):
                     self._current_option_index = 0
             elif key == curses.KEY_ENTER or key in [10, 13]:
                 playsound(SELECT_PRESS_SFX)
-                self._options[self._current_option_index][1]()
+                return self._options[self._current_option_index][1]()
             self._std_screen.refresh()
