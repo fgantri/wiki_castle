@@ -1,5 +1,5 @@
 from menu import Menu
-
+import sys
 
 class Room:
 
@@ -10,7 +10,7 @@ class Room:
         self._puzzle = puzzle
         self._chapter_menu = Menu(self._std_screen, False)
         self._chapter_menu.add_option("Wiki Rätsel lösen", self._call_puzzle)
-        self._chapter_menu.add_option("Spiel beenden", exit)
+        self._chapter_menu.add_option("Spiel beenden", sys.exit)
         self._handle_next_room = handle_next_room
         self._is_solved = False
 
@@ -21,11 +21,11 @@ class Room:
         if self._is_solved:
             self._chapter_menu = Menu(self._std_screen, False, 0)
             self._chapter_menu.add_option("Nächsten Raum betreten", self._handle_next_room)
-            self._chapter_menu.add_option("Spiel beenden", exit)
+            self._chapter_menu.add_option("Spiel beenden", sys.exit)
         else:
             self._chapter_menu = Menu(self._std_screen, False)
             self._chapter_menu.add_option("Wiki Rätsel lösen", self._call_puzzle)
-            self._chapter_menu.add_option("Spiel beenden", exit)
+            self._chapter_menu.add_option("Spiel beenden", sys.exit)
         self.run()
 
     def run(self):

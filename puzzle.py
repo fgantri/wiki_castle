@@ -1,9 +1,12 @@
 import random
-
 import curses
 from abc import ABC, abstractmethod
-
 from menu import Menu
+import warnings
+
+from bs4 import GuessedAtParserWarning
+# wikipedia library has internal problem, supress warning
+warnings.filterwarnings("ignore", category=GuessedAtParserWarning)
 
 import wikipedia
 

@@ -1,22 +1,11 @@
 import curses
 import os.path
-import threading
 
 from playsound import playsound
 from sprite import AsciiSprite
 
 KEY_PRESS_SFX = os.path.join(os.getcwd(), "assets", "sound_effects", "menu_mov_sfx.wav")
 SELECT_PRESS_SFX = os.path.join(os.getcwd(), "assets", "sound_effects", "select_sfx.wav")
-
-stop_music = threading.Event()
-
-def loopSound():
-    while not stop_music.is_set():
-        playsound(os.path.join(os.getcwd(), "assets", "sound_effects", "background_music_8bit.mp3"), block=True)
-
-loopThread = threading.Thread(target=loopSound, name='backgroundMusicThread')
-loopThread.start()
-
 
 class Menu:
 
