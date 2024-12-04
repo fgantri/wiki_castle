@@ -1,12 +1,23 @@
 Du erwachst auf einem kalten, steinernen Boden. Dunkelheit umgibt dich,
-nur das schwache Flackern einer Kerze erhellt den Raum. Vor dir liegt
-eine alte Schriftrolle. Mit zitternden Händen rollst du sie
-auf und liest die Worte:
+nur das schwache Flackern einer Kerze erhellt den Raum.
+Vor dir liegt eine alte Schriftrolle.
+Mit zitternden Händen rollst du sie auf und liest die Worte:
 'Du wurdest von mir, dem Wiki-Monster, in diese Burg verschleppt.
-Dein Wissen wird geprüft. Löse die Rätsel in jedem Raum, um
-die nächste Tür zu öffnen. Nur so kannst du entkommen.
-Scheiterst du, bleibst du hier... für immer.'
-Ein unheimliches Lachen hallt durch den Raum, gefolgt von
-einem lauten Knarzen. Plötzlich gleitet ein Teil der Wand zur
-Seite und enthüllt einen dunklen Geheimgang.
+Dein Wissen wird geprüft. Löse die Rätsel in jedem Raum, um die nächste Tür zu öffnen.
+Nur so kannst du entkommen. Scheiterst du, bleibst du hier... für immer.'
+Ein unheimliches Lachen hallt durch den Raum, gefolgt von einem lauten Knarzen.
+Plötzlich gleitet ein Teil der Wand zur Seite und enthüllt einen dunklen Geheimgang.
 Am Ende des Ganges erkennst du eine massive Tür.
+
+Du näherst dich der massiven Tür, die schwer und unheilvoll vor dir steht.
+Ihre Oberfläche ist aus altem, verwittertem Holz, durchzogen von tiefen Kerben und Spuren.
+Es sieht aus, als hätte jemand verzweifelt mit seinen Fingernägeln versucht,
+sich hinauszukratzen. Der Gedanke daran lässt dir einen Schauer über den Rücken laufen.
+
+Doch dann fällt dir etwas Seltsames auf: In das Holz ist eine Nachricht eingeritzt,
+die sorgfältig und mit Bedacht in die Oberfläche gezeichnet wurde.
+Du beugst dich näher, um die Worte zu entziffern.
+
+Ein eisiger Windhauch streift durch den Raum, als würde die Tür auf deine Antwort warten.
+Du spürst, dass die Lösung dieses Rätsels der Schlüssel sein muss, um weiterzukommen.
+Aber die Zeit drängt – wer weiß, welche Gefahren noch in der Dunkelheit lauern?
