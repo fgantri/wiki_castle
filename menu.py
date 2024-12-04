@@ -1,7 +1,22 @@
 import curses
 import os.path
+import threading
 
+from playsound import playsound
 from sprite import AsciiSprite
+
+KEY_PRESS_SFX = os.path.join(os.getcwd(), "assets", "sound_effects", "menu_mov_sfx.wav")
+SELECT_PRESS_SFX = os.path.join(os.getcwd(), "assets", "sound_effects", "select_sfx.wav")
+
+stop_music = threading.Event()
+
+def loopSound():
+    while not stop_music.is_set():
+        playsound(os.path.join(os.getcwd(), "assets", "sound_effects", "background_music_8bit.mp3"), block=True)
+
+loopThread = threading.Thread(target=loopSound, name='backgroundMusicThread')
+loopThread.start()
+
 
 class Menu:
 
@@ -22,18 +37,22 @@ class Menu:
         self._options.append((label, callback))
 
     def render(self, margin_top = 0):
+
         while True:
             self._print_menu(self._current_option_index, margin_top)
             key = self._std_screen.getch()
             if key == curses.KEY_UP:
+                playsound(KEY_PRESS_SFX)
                 self._current_option_index -= 1
                 if self._current_option_index == -1:
                     self._current_option_index = len(self._options)-1
             elif key == curses.KEY_DOWN:
+                playsound(KEY_PRESS_SFX)
                 self._current_option_index += 1
                 if self._current_option_index == len(self._options):
                     self._current_option_index = 0
             elif key == curses.KEY_ENTER or key in [10, 13]:
+                playsound(SELECT_PRESS_SFX)
                 self._options[self._current_option_index][1]()
             self._std_screen.refresh()
 
@@ -76,13 +95,16 @@ class MainMenu(Menu):
             self._print_menu(self._current_option_index)
             key = self._std_screen.getch()
             if key == curses.KEY_UP:
+                playsound(KEY_PRESS_SFX)
                 self._current_option_index -= 1
                 if self._current_option_index == -1:
                     self._current_option_index = len(self._options)-1
             elif key == curses.KEY_DOWN:
+                playsound(KEY_PRESS_SFX)
                 self._current_option_index += 1
                 if self._current_option_index == len(self._options):
                     self._current_option_index = 0
             elif key == curses.KEY_ENTER or key in [10, 13]:
+                playsound(SELECT_PRESS_SFX)
                 self._options[self._current_option_index][1]()
             self._std_screen.refresh()
