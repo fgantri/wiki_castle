@@ -20,16 +20,20 @@ class Game:
             puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room),
             Room(self._std_screen,
             AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room2.txt")),
-            Text(os.path.join(TEXTS_PATH, "chapter1.txt")),
+            Text(os.path.join(TEXTS_PATH, "chapter2.txt")),
             puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room),
             Room(self._std_screen,
             AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room3.txt")),
-            Text(os.path.join(TEXTS_PATH, "chapter1.txt")),
+            Text(os.path.join(TEXTS_PATH, "chapter3.txt")),
             puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room),
             Room(self._std_screen,
             AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room4.txt")),
-            Text(os.path.join(TEXTS_PATH, "chapter1.txt")),
-            puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room)
+            Text(os.path.join(TEXTS_PATH, "chapter4.txt")),
+            puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room),
+            Room(self._std_screen,
+            AsciiSprite(os.path.join(ROOMS_IMG_PATH, "room5.txt")),
+             Text(os.path.join(TEXTS_PATH, "chapter5.txt")),
+             puzzle=SolveTitle(std_screen), handle_next_room=self.handle_next_room)
         ]
 
     def handle_next_room(self):
@@ -48,15 +52,17 @@ class Game:
     def credit_screen(self):
         dev_list = [
             "Fouad - Game Engine Developer",
-            "Joshua - Story Writer, Story Dev",
+            "Joshua - Story Writer, Puzzle Dev",
             "Kirill - Audio Engineer",
-            "Feras - Wiki Game Dev"
+            "Feras - Puzzle Dev"
         ]
         self._std_screen.clear()
 
         screen_height, screen_width = self._std_screen.getmaxyx()
-        title = "CREDIT SCREEN"
-        self._std_screen.addstr(6, screen_width // 2 - len(title) // 2, title, curses.color_pair(1) | curses.A_BOLD)
+        congrats = "Glückwunsch du hast es aus dem Schloss geschafft!"
+        title = "CREDIT SCREEN RAUM"
+        self._std_screen.addstr(6, screen_width // 2 - len(congrats) // 2, congrats, curses.color_pair(6) | curses.A_BOLD)
+        self._std_screen.addstr(8, screen_width // 2 - len(title) // 2, title, curses.color_pair(1) | curses.A_BOLD)
         for i, dev in enumerate(dev_list):
             x = screen_width // 2 - len(dev) // 2
             y = screen_height // 2 - len(dev_list) + i * 2

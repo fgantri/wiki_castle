@@ -1,22 +1,14 @@
-+------------------------------------+
-|#####|WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW|
-|#####|<(*****`s HOME - No Aliens !)>|
-|#####|WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW|
-|#####|WWWWWWWWWW.----.WWWWWWWWWWWWWW|
-|#####|WWWWWWWW,'  ||  `.WWWWWWWWWWWW|
-|#####|WWWWWWWI    ||    IWWWWWWWWWWW|
-|#####|WWWWWWWI    ||    IWWWWWWWWWWW|
-|#####|WWWWWWWI    ||    IWWWWWWWWWWW|
-|#####|WWWWWWWI   _||_   IWWWWWWWWWWW|
-|#####|WWWWWWWI  ' || `  IWWWWWWWWWWW|
-|#####|WWWWWWWI    ||    IWWWWWWWWWWW|
-|#####|WWWWWWWI    ||    IWWWWWWWWWWW|
-|#####|WWWWWWWI    ||    IWWWWWWWWWWW|
-|#####|WWWWWWWI____||____IWWWWWWWWWWW|
-|#####/_o_                           |
-|####/  X                            |
-|###/  ' `                           |
-|##/                                 |
-|#/                                  |
-|/                                   |
-+------------------------------------+
+        _____
+     _.'_____`._
+   .'.-'  12 `-.`.
+  /,' 11      1 `.\
+ // 10      /   2 \\
+;;         /       ::
+|| 9  ----O      3 ||
+::                 ;;
+ \\ 8           4 //
+  \`. 7       5 ,'/
+   '.`-.__6__.-'.'
+    ((-._____.-))
+    _))       ((_
+   '--'       '--'

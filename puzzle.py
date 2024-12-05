@@ -79,18 +79,18 @@ class SolveTitle(Puzzle):
         article = get_random_fantasy_article()
 
         # Display description
-        instruction = "Erschließe dir den Wikipedia Artikel anhand des folgenden Textes:"
+        instruction = "Erschließe dir den Titel des Wikipedia Artikels anhand des folgenden Textes:"
         hr = "##|===========================|##"
-        self._std_screen.addstr(2, screen_width // 2 - len(instruction) // 2,
+        self._std_screen.addstr(4, screen_width // 2 - len(instruction) // 2,
             instruction, curses.A_BOLD | curses.color_pair(5))
-        self._std_screen.addstr(4, screen_width // 2 - len(hr) // 2,
+        self._std_screen.addstr(6, screen_width // 2 - len(hr) // 2,
                                 hr, curses.A_BOLD | curses.color_pair(5))
-        article_words = article['description'].split(" ")
+        article_words = article['description'].replace("\n", " ").split(" ")
         lines = []
         line = ""
         word_counter = 0
         for word in article_words:
-            if word_counter == 15:
+            if word_counter == 10:
                 word_counter = 0
                 lines.append(line)
                 line = ""
@@ -98,7 +98,7 @@ class SolveTitle(Puzzle):
             word_counter += 1
 
         for i, line in enumerate(lines):
-            self._std_screen.addstr(6 + i, screen_width // 2 - len(line) // 2, line)
+            self._std_screen.addstr(8 + i, screen_width // 2 - len(line) // 2, line)
 
         def set_choice(opt):
             self._user_choice = opt

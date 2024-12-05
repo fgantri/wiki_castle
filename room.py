@@ -32,7 +32,7 @@ class Room:
         self._std_screen.clear()
         self._std_screen.addstr(str(self._ascii_sprite))
         for i, line in enumerate(self._description.lines):
-            self._std_screen.addstr(i, self._ascii_sprite.width, line)
+            self._std_screen.addstr(i, self._ascii_sprite.width + 5, line)
         self._chapter_menu.render(self._ascii_sprite.height)
         self._std_screen.getch()
         self._std_screen.refresh()
